@@ -21,6 +21,16 @@ public:
     //元素访问
     string& front();
     string& back();
+    const string& front() const
+    {
+        check(0, "front on empty StrBlob");
+        return data->front();
+    }
+    const string& back() const
+    {
+        check(0, "back on empty StrBlob");
+        return data->back();
+    }
 
 private:
     shared_ptr<vector<string>> data;
@@ -80,5 +90,11 @@ int main(){
     }
     cout<<b1.size()<<endl;
     // cout<<b2.size()<<endl;
+    const StrBlob csb{"hello", "world", "pezy"};
+    StrBlob sb{"hello", "world", "Mooophy"};
+
+    std::cout << csb.front() << " " << csb.back() << std::endl;
+    sb.back() = "pezy";
+    std::cout << sb.front() << " " << sb.back() << std::endl;
 
 }
