@@ -9,6 +9,7 @@ void print(Iter beg, Iter end){
     if(beg!=end){
         cout<<*beg<<" ";
         print(std::next(beg),end);
+
     }
 }
 
