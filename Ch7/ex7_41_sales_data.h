@@ -10,12 +10,11 @@ std::istream &read(std::istream& ,Sales_data&);
 
 struct Sales_data {
     //委托构造函数
-    Sales_data(string s,unsigned cnt, double price):bookNo(s),units_sold(cnt),revenue(cnt*price) {cout<<1<<endl;}
+    Sales_data(string s,unsigned cnt, double price):bookNo(s),units_sold(cnt),revenue(cnt*price) {}
     //其余构造函数全部委托另一个构造函数
-    Sales_data():Sales_data("",0,0){cout<<2<<endl;}
-    Sales_data(string s):Sales_data(s,0,0){cout<<3<<endl;}
+    Sales_data():Sales_data("",0,0){}
+    Sales_data(string s):Sales_data(s,0,0){}
     Sales_data(std::istream& is):Sales_data(){
-        cout<<4<<endl;
         read(is,*this);
     }
     
