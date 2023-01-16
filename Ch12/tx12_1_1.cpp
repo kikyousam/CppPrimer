@@ -6,8 +6,25 @@
 
 using namespace std;
 
+// int main(){
+//     shared_ptr<string> p1;     //shared_ptr指向string
+//     shared_ptr<list<int>> p2;   //shared_ptr指向list<int>>
 
+//     if(p1&&p1->empty())
+//         *p1="hi";
+//     if(p2&&p2->empty())
+//         p2=make_shared<list<int>>();
+    
+//     shared_ptr<int> p3=make_shared<int>(4);
+//     shared_ptr<string> p4=make_shared<string>(5,'d');
+//     shared_ptr<int> p5 = make_shared<int> ();
+//     auto p6 = make_shared<int> (3);
 
+//     auto p = make_shared<int>(32);
+//     auto q(p);
+//     auto r = make_shared<int>(42);
+//     r=q;
+// }
 //定义StrBlob类
 class StrBlob{
 public:
@@ -56,6 +73,17 @@ string& StrBlob::front(){
 }
 
 string& StrBlob::back(){
+    check(0,"back on empty StrBlob");
+    return data->back();
+}
+
+const string& StrBlob::front() const{
+    //如果vector为空，check会抛出一个异常
+    check(0,"front on empty StrBlob");
+    return data->front();
+}
+
+const string& StrBlob::back() const{
     check(0,"back on empty StrBlob");
     return data->back();
 }

@@ -40,6 +40,15 @@
         "xutility": "cpp",
         "algorithm": "cpp",
         "functional": "cpp",
-        "iterator": "cpp"
+        "iterator": "cpp",
+        "xhash": "cpp",
+        "fstream": "cpp",
+        "numeric": "cpp",
+        "unordered_map": "cpp",
+        "map": "cpp",
+        "set": "cpp",
+        "xtree": "cpp",
+        "sstream": "cpp",
+        "cctype": "cpp"
     }
 }
