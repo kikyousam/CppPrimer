@@ -1,5 +1,5 @@
-#ifndef EX12_22_H
-#define EX12_22_H
+#ifndef EX12_26_H
+#define EX12_26_H
 
 #include <vector>
 #include <string>
@@ -23,8 +23,11 @@ public:
 
     StrBlob() : data(std::make_shared<vector<string>>()) {}
     StrBlob(std::initializer_list<string> il)
-        : data(std::make_shared<vector<string>>(il))
-    {
+        : data(std::make_shared<vector<string>>(il)) {}
+    StrBlob(const StrBlob& orig):data(std::make_shared<vector<string>>(*orig.data)){}
+    StrBlob& operator=(const StrBlob& orig){
+        data=std::make_shared<vector<string>>(*orig.data);
+        return *this;
     }
 
     size_type size() const { return data->size(); }

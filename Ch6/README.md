@@ -3,6 +3,7 @@
 - 如果实参类型相同。initializer_list
 - 如果实参类型不同。特殊的函数——可变参数模板（16.4）
 - 
+initializer_list类型定义在initializer_list头文件中。是一个模板类型，但是里面都是常量。
 
 ### 6.5.2 内联函数和constexpr函数
 constexpr函数被隐式的指定为内联函数。constexpr函数不一定返回常量表达式
